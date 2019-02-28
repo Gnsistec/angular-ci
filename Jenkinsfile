@@ -1,7 +1,12 @@
 pipeline {
     agent  any 
     stages {
-        stage('build') {
+		stage('Install Npm') {
+				steps {
+					 bat 'npm install'
+				}
+			}
+        stage('UnitTest') {
             steps {
                  bat 'ng test'
             }
