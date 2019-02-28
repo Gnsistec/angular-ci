@@ -6,10 +6,10 @@ pipeline {
 					 bat 'npm install'
 				}
 			}
-        stage('UnitTest') {
-            steps {
-                 bat 'ng test'
-            }
-        }
+        stage('AngularBuild') {
+				steps {
+					 bat 'ng build'
+				}
+        }		
     }
 }
