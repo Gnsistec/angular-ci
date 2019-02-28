@@ -5,6 +5,11 @@ pipeline {
 				steps {
 					 bat 'npm install'
 				}
+			}	
+		stage('UnitTest') {
+				steps {
+					 bat 'ng t --watch=false'
+				}
 			}
         stage('AngularBuild') {
 				steps {
