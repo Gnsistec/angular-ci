@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                bat 'npm --version'
+                git poll: true, url 'https://github.com/Gnsistec/angular-ci.git'
             }
         }
     }
