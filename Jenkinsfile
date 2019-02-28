@@ -13,7 +13,7 @@ pipeline {
 			}
         stage('AngularBuild') {
 				steps {
-					 bat 'ng build'
+					 bat 'ng build --prod'
 				}
         }		
     }
